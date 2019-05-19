@@ -41,7 +41,7 @@ module.exports.run = (bot, message, args) => {
             client_secret,
             client_id,
             redirect_uris
-        } = credentials.installed;
+        } = credentials;
         const oAuth2Client = new google.auth.OAuth2(
             client_id, client_secret, redirect_uris[0]);
 
