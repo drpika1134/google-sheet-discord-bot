@@ -46,7 +46,7 @@ module.exports.run = (bot, message, args) => {
             client_id, client_secret, redirect_uris[0]);
 
         // Check if we have previously stored a token.
-        if (err) return /*getNewToken(oAuth2Client, callback);*/
+        // if (err) return /*getNewToken(oAuth2Client, callback);*/
         oAuth2Client.setCredentials(tokenObj);
         callback(oAuth2Client);
     }
