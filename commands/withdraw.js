@@ -31,7 +31,7 @@ var credientialsObj = {
 }
 
 module.exports.run = (bot, message, args) => {
-    if (err) return console.log('Error loading client secret file:', err);
+    // if (err) return console.log('Error loading client secret file:', err);
     // Authorize a client with credentials, then call the Google Sheets API.
     authorize(credientialsObj, listMajors);
 
