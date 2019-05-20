@@ -105,7 +105,7 @@ module.exports.run = (bot, message, args) => {
         var playerName;
         if (playerTag === "DrPika#9814") {
             playerName = "Hieu";
-        } else if (playerTag === "syLph#46313") {
+        } else if (playerTag === "syLph#4613") {
             playerName = "syLph";
         } else if (playerTag === "lorey#9165") {
             playerName = "Droy";
