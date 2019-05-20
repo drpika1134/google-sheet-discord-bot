@@ -23,6 +23,7 @@ client.on('message', message => {
             args.splice(i, 1);
         }
     }
+    console.log(args);
     try {
 
         var commandFile = require(`./commands/${command}.js`)
