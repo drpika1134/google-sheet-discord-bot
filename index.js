@@ -17,9 +17,11 @@ client.on('message', message => {
     } else {
         return
     }
-
-    console.log(args);
-
+    for (var i = 0; i < args.length; i++) {
+        if (args[i].length === "") {
+            args.splice(i, 1);
+        }
+    }
     try {
         var commandFile = require(`./commands/${command}.js`)
         commandFile.run(client, message, args)
