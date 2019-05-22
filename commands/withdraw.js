@@ -113,17 +113,17 @@ module.exports.run = (bot, message, args) => {
             playerName = "Uniment";
         }
         args[0] = parseInt(args[0].replace(/,/g, ""));
-        args[1] = parseInt(args[0].replace(/,/g, ""));
-        args[2] = parseInt(args[0].replace(/,/g, ""));
-        args[3] = parseInt(args[0].replace(/,/g, ""));
-        args[4] = parseInt(args[0].replace(/,/g, ""));
-        args[5] = parseInt(args[0].replace(/,/g, ""));
-        args[6] = parseInt(args[0].replace(/,/g, ""));
-        args[7] = parseInt(args[0].replace(/,/g, ""));
-        args[8] = parseInt(args[0].replace(/,/g, ""));
-        args[9] = parseInt(args[0].replace(/,/g, ""));
-        args[10] = parseInt(args[0].replace(/,/g, ""));
-        args[11] = parseInt(args[0].replace(/,/g, ""));
+        args[1] = parseInt(args[1].replace(/,/g, ""));
+        args[2] = parseInt(args[2].replace(/,/g, ""));
+        args[3] = parseInt(args[3].replace(/,/g, ""));
+        args[4] = parseInt(args[4].replace(/,/g, ""));
+        args[5] = parseInt(args[5].replace(/,/g, ""));
+        args[6] = parseInt(args[6].replace(/,/g, ""));
+        args[7] = parseInt(args[7].replace(/,/g, ""));
+        args[8] = parseInt(args[8].replace(/,/g, ""));
+        args[9] = parseInt(args[9].replace(/,/g, ""));
+        args[10] = parseInt(args[10].replace(/,/g, ""));
+        args[11] = parseInt(args[11].replace(/,/g, ""));
 
         var getAllTime = year + "-" + month + "-" + day
         sheets.spreadsheets.values.append({
