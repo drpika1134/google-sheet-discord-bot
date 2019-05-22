@@ -112,6 +112,19 @@ module.exports.run = (bot, message, args) => {
         } else if (playerTag === "Uniment#2751") {
             playerName = "Uniment";
         }
+        args[0] = parseInt(args[0].replace(/,/g, ""));
+        args[1] = parseInt(args[0].replace(/,/g, ""));
+        args[2] = parseInt(args[0].replace(/,/g, ""));
+        args[3] = parseInt(args[0].replace(/,/g, ""));
+        args[4] = parseInt(args[0].replace(/,/g, ""));
+        args[5] = parseInt(args[0].replace(/,/g, ""));
+        args[6] = parseInt(args[0].replace(/,/g, ""));
+        args[7] = parseInt(args[0].replace(/,/g, ""));
+        args[8] = parseInt(args[0].replace(/,/g, ""));
+        args[9] = parseInt(args[0].replace(/,/g, ""));
+        args[10] = parseInt(args[0].replace(/,/g, ""));
+        args[11] = parseInt(args[0].replace(/,/g, ""));
+
         var getAllTime = year + "-" + month + "-" + day
         sheets.spreadsheets.values.append({
             "spreadsheetId": process.env.sheetID,
@@ -124,18 +137,19 @@ module.exports.run = (bot, message, args) => {
                         "Withdrawal",
                         getAllTime,
                         playerName,
-                        parseInt(args[0].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[1].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[2].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[3].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[4].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[5].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[6].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[7].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[8].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[9].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[10].toString().replace(/,/g, "")) * -1,
-                        parseInt(args[11].toString().replace(/,/g, "")) * -1,
+                        args[0],
+                        args[1],
+                        args[2],
+                        args[3],
+                        args[4],
+                        args[5],
+                        args[6],
+                        args[7],
+                        args[8],
+                        args[9],
+                        args[10],
+                        args[11],
+
                     ],
 
                 ]
