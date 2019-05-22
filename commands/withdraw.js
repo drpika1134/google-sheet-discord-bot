@@ -112,10 +112,7 @@ module.exports.run = (bot, message, args) => {
         } else if (playerTag === "Uniment#2751") {
             playerName = "Uniment";
         }
-        console.log(args);
-        console.log(args[0])
-        console.log(args[0] + 1);
-        console.log(args[0] + "".replace(/,/g, ""))
+
         var getAllTime = year + "-" + month + "-" + day
         sheets.spreadsheets.values.append({
             "spreadsheetId": process.env.sheetID,
@@ -129,6 +126,18 @@ module.exports.run = (bot, message, args) => {
                         getAllTime,
                         playerName,
                         "-" + (args[0] + "".replace(/,/g, "")),
+                        "-" + (args[1] + "".replace(/,/g, "")),
+                        "-" + (args[2] + "".replace(/,/g, "")),
+                        "-" + (args[3] + "".replace(/,/g, "")),
+                        "-" + (args[4] + "".replace(/,/g, "")),
+                        "-" + (args[5] + "".replace(/,/g, "")),
+                        "-" + (args[6] + "".replace(/,/g, "")),
+                        "-" + (args[7] + "".replace(/,/g, "")),
+                        "-" + (args[8] + "".replace(/,/g, "")),
+                        "-" + (args[9] + "".replace(/,/g, "")),
+                        "-" + (args[10] + "".replace(/,/g, "")),
+                        "-" + (args[11] + "".replace(/,/g, "")),
+
                     ],
 
                 ]
