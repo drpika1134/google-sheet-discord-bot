@@ -114,6 +114,8 @@ module.exports.run = (bot, message, args) => {
         }
         console.log(args);
         console.log(args[0])
+        console.log(args[0] + 1);
+        console.log(args[0] + "".replace(/,/g, ""))
         var getAllTime = year + "-" + month + "-" + day
         sheets.spreadsheets.values.append({
             "spreadsheetId": process.env.sheetID,
@@ -126,20 +128,7 @@ module.exports.run = (bot, message, args) => {
                         "Withdrawal",
                         getAllTime,
                         playerName,
-                        parseInt(args[0] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[1] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[2] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[3] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[4] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[5] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[6] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[7] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[8] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[9] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[10] + "".replace(/,/g, "")) * -1,
-                        parseInt(args[11] + "".replace(/,/g, "")) * -1,
-
-
+                        "-" + (args[0] + "".replace(/,/g, "")),
                     ],
 
                 ]
