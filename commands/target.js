@@ -85,30 +85,7 @@ module.exports.run = (bot, message, args) => {
       auth
     })
 
-    var d = new Date()
-    var year = d.getUTCFullYear()
-    var month = d.getUTCMonth() + 1
-    var day = d.getUTCDate()
-
-    if (month <= 9) {
-      month.toString()
-      month = '0' + month
-    }
-    if (day <= 9) {
-      day = '0' + day
-    }
-    var playerTag = message.member.user.tag
-    var playerName
-    if (playerTag === 'DrPika#9814') {
-      playerName = 'Hieu'
-    } else if (playerTag === 'syLph#4613') {
-      playerName = 'syLph'
-    } else if (playerTag === 'lorey#9165') {
-      playerName = 'Droy'
-    } else if (playerTag === 'Uniment#2751') {
-      playerName = 'Uniment'
-    }
-    var getAllTime = year + '-' + month + '-' + day
+    var moneyWithDollarSign = args[4].substring(1)
     sheets.spreadsheets.values.append({
       spreadsheetId: process.env.sheetID,
       range: 'Targets!A2:L2',
@@ -119,7 +96,7 @@ module.exports.run = (bot, message, args) => {
           [
             args[0], // link
             args[1], // score
-            args[4], // money
+            moneyWithDollarSign, // money
             args[17], // gas
             args[19], //muni
             args[21], //steel
