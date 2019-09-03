@@ -112,5 +112,6 @@ module.exports.run = (bot, message, args) => {
         ]
       }
     })
+    console.log(args, 'This is the end of the function')
   }
 }
