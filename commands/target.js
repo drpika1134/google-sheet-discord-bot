@@ -84,8 +84,8 @@ module.exports.run = (bot, message, args) => {
       version: 'v4',
       auth
     })
-
-    var moneyWithDollarSign = args[4].substring(1)
+    var dollar = args[4].substring(1)
+    var dollar2 = dollar.substring(0, dollar.length - 1)
     sheets.spreadsheets.values.append({
       spreadsheetId: process.env.sheetID,
       range: 'Targets!A2:L2',
@@ -96,7 +96,7 @@ module.exports.run = (bot, message, args) => {
           [
             args[0], // link
             args[1], // score
-            moneyWithDollarSign, // money
+            dollar2, // money
             args[17], // gas
             args[19], //muni
             args[21], //steel
