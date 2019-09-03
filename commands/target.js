@@ -88,7 +88,7 @@ module.exports.run = (bot, message, args) => {
     var dollar2 = dollar.substring(0, dollar.length - 1)
     sheets.spreadsheets.values.append({
       spreadsheetId: process.env.sheetID,
-      range: 'Targets!A2:L2',
+      range: 'Targets!A2:N2',
       valueInputOption: 'USER_ENTERED',
       insertDataOption: 'INSERT_ROWS',
       resource: {
