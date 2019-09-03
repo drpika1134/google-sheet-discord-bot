@@ -111,29 +111,29 @@ module.exports.run = (bot, message, args) => {
     var getAllTime = year + '-' + month + '-' + day
     sheets.spreadsheets.values.append({
       spreadsheetId: process.env.sheetID,
-      range: 'Targets!A18:O18',
+      range: 'Targets!A2:L2',
       valueInputOption: 'USER_ENTERED',
       insertDataOption: 'INSERT_ROWS',
       resource: {
         values: [
           [
-            args[0],
-            args[3],
-            args[4],
-            args[6], //1124
-            args[8], //738
-            args[10], //58
-            args[12], // 377
-            args[14], // 82
-            args[16], //961
-            args[18], //536
-            args[20], //640
-            args[22],
-            args[25]
+            args[0], // link
+            args[1], // score
+            args[4], // money
+            args[17], // gas
+            args[19], //muni
+            args[21], //steel
+            args[23], // alum
+            args[26], // food
+            args[9], //Ura
+            args[5], // Coal
+            args[7], //Oil
+            args[11], //Iron
+            args[13], // Baux
+            args[15] // Lead
           ]
         ]
       }
     })
-    console.log(args)
   }
 }
