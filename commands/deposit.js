@@ -111,6 +111,8 @@ module.exports.run = (bot, message, args) => {
             playerName = "Droy";
         } else if (playerTag === "Uniment#2751") {
             playerName = "Uniment";
+        } else if (playerTag === "Neantasia#5825") {
+            playerName = "Nean";
         }
         var getAllTime = year + "-" + month + "-" + day
         sheets.spreadsheets.values.append({
